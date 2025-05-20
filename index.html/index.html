@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biréré Express</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Biréré Express</h1>
+    <p class="subtitle">Des produits de la ville, livrés à votre porte</p>
+  </header>
+  <main>
+    <section class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher un produit...">
+      <button onclick="filterProducts()">🔍</button>
+    </section>
+    <section class="categories">
+      <button onclick="filterCategory('all')">Tous</button>
+      <button onclick="filterCategory('chaussures')">Chaussures</button>
+      <button onclick="filterCategory('vêtements')">Vêtements</button>
+      <button onclick="filterCategory('électronique')">Électronique</button>
+    </section>
+    <section class="product-grid" id="productGrid">
+      <!-- Produits générés dynamiquement -->
+    </section>
+    <section id="cartPage">
+      <h2>🛒 Panier</h2>
+      <ul id="cartItems"></ul>
+      <button class="order-btn" onclick="orderCart()">Commander le panier</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
